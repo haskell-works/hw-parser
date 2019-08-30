@@ -41,21 +41,21 @@ library
           , bytestring
           , hw-prim
           , text
-  hs-source-dirs:   src
-  exposed-modules:  HaskellWorks.Data.Parser
-  other-modules:    Paths_hw_parser
-  autogen-modules:  Paths_hw_parser
+  hs-source-dirs:       src
+  exposed-modules:      HaskellWorks.Data.Parser
+  other-modules:        Paths_hw_parser
+  autogen-modules:      Paths_hw_parser
 
 test-suite hw-parser-test
   import:   base, config
           , hedgehog
           , hspec
           , hw-hspec-hedgehog
-  type:             exitcode-stdio-1.0
-  main-is:          Spec.hs
-  build-depends:    hw-parser
-  hs-source-dirs:   test
-  ghc-options:      -threaded -rtsopts -with-rtsopts=-N
-  build-tools:      hspec-discover
-  other-modules:    Paths_hw_parser
-  autogen-modules:  Paths_hw_parser
+  type:                 exitcode-stdio-1.0
+  main-is:              Spec.hs
+  build-depends:        hw-parser
+  hs-source-dirs:       test
+  ghc-options:          -threaded -rtsopts -with-rtsopts=-N
+  build-tool-depends:   hspec-discover:hspec-discover
+  other-modules:        Paths_hw_parser
+  autogen-modules:      Paths_hw_parser
